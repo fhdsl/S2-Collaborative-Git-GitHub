@@ -1,5 +1,5 @@
 ---
-title: "WDL Workflows Guide"
+title: "Collaborative Git and GitHub"
 date: "December, 2023"
 site: bookdown::bookdown_site
 documentclass: book
