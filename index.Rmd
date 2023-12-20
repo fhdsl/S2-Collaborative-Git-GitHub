@@ -1,5 +1,5 @@
 ---
-title: "Course Name"
+title: "WDL Workflows Guide"
 date: "`r format(Sys.time(), '%B, %Y')`"
 site: bookdown::bookdown_site
 documentclass: book
@@ -15,12 +15,11 @@ output:
 
 # About this Course {-}
 
+You will expand your current knowledge of Git and GitHub to help your research be more collaborative, reproducible, and transparent. You will learn how to develop your work independently on a “branch” before “merging” it back to a shared repository, and resolve any conflicts along the way. Then, you will learn about the pull request model of collaboration on GitHub and how to conduct code reviews.
 
-## Available course formats
 
-This course is available in multiple formats which allows you to take it in the way that best suites your needs. You can take it for certificate which can be for free or fee.
+## Target Audience
 
-- The material for this course can be viewed without login requirement on this [Bookdown website](LINK HERE). This format might be most appropriate for you if you rely on screen-reader technology.
-- This course can be taken for [free certification through Leanpub](LINK HERE).
-- This course can be taken on [Coursera for certification here](LINK HERE) (but it is not available for free on Coursera).
-- Our courses are open source, you can find the [source material for this course on GitHub](LINK HERE).
+Researchers who want to work on a code base collaboratively in a version-controlled manner.
+
+
