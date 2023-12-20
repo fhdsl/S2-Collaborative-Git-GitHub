@@ -1,4 +1,5 @@
 target-audience
+workshop-notes
 review-intro-to-git-material
 intro-to-branching-and-merging
 set-up
