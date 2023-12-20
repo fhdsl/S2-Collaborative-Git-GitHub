@@ -1,6 +1,5 @@
 
 
-
 ## Review Intro to Git material
 
 During the Intro to Git workshop, we summarized Git in two mental models. The *first model* is the idea of making sequential commits to save your work's history with a metadata, as shown below.
