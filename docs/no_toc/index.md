@@ -1,6 +1,6 @@
 ---
 title: "Collaborative Git and GitHub"
-date: "December, 2023"
+date: "January, 2024"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
