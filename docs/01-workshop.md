@@ -1,4 +1,5 @@
 
+
 # Workshop Notes
 
 ## Review Intro to Git material
@@ -337,7 +338,7 @@ To create a new branch on your remote, you can use the GitHub website:
 
 ![](images/git_branch.png)
 
-The branch `clo2_developmenet` is created on the remote, but it hasn't been updated locally. We run `git pull` locally to update it and switch to that branch via `git checkout`.
+The branch `clo2_development` is created on the remote, but it hasn't been updated locally. We run `git pull` locally to update it and switch to that branch via `git checkout`.
 
 ```         
 % git pull
@@ -363,7 +364,10 @@ After a variable number of commits and pushes, your remote branch is a different
 
 ### Pull Requests
 
-A **pull request** is a way to propose changes from a branch before it is merged back into the main repository. It is just like `git merge`, but it requires more documentation and confirmation. For instance, a collaborator can create their own work on a branch, and then create a pull request to have that new branch's feature to be integrated back to the main branch. The owner of the repository review the proposed changes before accepting the pull request.
+A **pull request** is a way to propose changes from a branch before it is merged back into the main repository. It is just like `git merge`, but it requires more documentation and confirmation. For instance, a collaborator can create their own work on a branch, and then create a pull request to have that new branch's feature to be integrated back to the main branch. The owner of the repository sometimes review the proposed changes before accepting the pull request.
+
+
+![](resources/images/01-workshop_files/figure-docx//1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I_g1014c75158f_0_751.png){width=100%}
 
 When you have pushed changes to the branch, you will see an option to *"Compare & pull request"*. Click on it.
 
@@ -405,7 +409,7 @@ Some advice for reviewers responding to a pull request:
 
 -   Does the code stick to the style and conventions of this project?
 
-More advice on code review can be found here for [pull request authors](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review—as-an-author.html), and [pull request reviewers](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review—as-a-reviewer.html).
+More advice on code review can be found here for [pull request authors](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-an-author.html), and [pull request reviewers](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-a-reviewer.html).
 
 ## Appendix: Local and remote as branches
 
