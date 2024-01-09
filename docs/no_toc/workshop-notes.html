@@ -386,7 +386,7 @@ Merge made by the &#39;ort&#39; strategy.
 <h3><span class="header-section-number">1.6.2</span> Branching with remotes</h3>
 <p>To create a new branch on your remote, you can use the GitHub website:</p>
 <p><img src="images/git_branch.png" /></p>
-<p>The branch <code>clo2_developmenet</code> is created on the remote, but it hasn’t been updated locally. We run <code>git pull</code> locally to update it and switch to that branch via <code>git checkout</code>.</p>
+<p>The branch <code>clo2_development</code> is created on the remote, but it hasn’t been updated locally. We run <code>git pull</code> locally to update it and switch to that branch via <code>git checkout</code>.</p>
 <pre><code>% git pull
 From https://github.com/fhdsl/S2_Collaborative_Git_GitHub_Student_Practice
  * [new branch]      clo2_development -&gt; origin/clo2_development
@@ -404,7 +404,8 @@ Switched to a new branch &#39;clo2_development&#39;</code></pre>
 </div>
 <div id="pull-requests-1" class="section level3" number="1.6.3">
 <h3><span class="header-section-number">1.6.3</span> Pull Requests</h3>
-<p>A <strong>pull request</strong> is a way to propose changes from a branch before it is merged back into the main repository. It is just like <code>git merge</code>, but it requires more documentation and confirmation. For instance, a collaborator can create their own work on a branch, and then create a pull request to have that new branch’s feature to be integrated back to the main branch. The owner of the repository review the proposed changes before accepting the pull request.</p>
+<p>A <strong>pull request</strong> is a way to propose changes from a branch before it is merged back into the main repository. It is just like <code>git merge</code>, but it requires more documentation and confirmation. For instance, a collaborator can create their own work on a branch, and then create a pull request to have that new branch’s feature to be integrated back to the main branch. The owner of the repository sometimes review the proposed changes before accepting the pull request.</p>
+<p><img src="resources/images/01-workshop_files/figure-html/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I_g1014c75158f_0_751.png" title="After a variable number of commits, your branch, called a-new-branch is a different version of the original code base that may have a nifty improvement to it. But our main goal is to add that nifty improvement to the main branch. To start this process of bringing in new changes to the main curated repository, we will create a pull request. A pull request will show us the difference between main and a-new-branch so you scrutinize this feature before adding it to the main branch." alt="After a variable number of commits, your branch, called a-new-branch is a different version of the original code base that may have a nifty improvement to it. But our main goal is to add that nifty improvement to the main branch. To start this process of bringing in new changes to the main curated repository, we will create a pull request. A pull request will show us the difference between main and a-new-branch so you scrutinize this feature before adding it to the main branch." width="100%" /></p>
 <p>When you have pushed changes to the branch, you will see an option to <em>“Compare &amp; pull request”</em>. Click on it.</p>
 <p><img src="images/git_PR1.png" /></p>
 <p>You will see that you are trying to merge <code>clo2_development</code> into <code>main</code> on the remote. It also requires you to write a description of what you did on your branch.</p>
@@ -433,7 +434,7 @@ Switched to a new branch &#39;clo2_development&#39;</code></pre>
 <li><p>Is the code efficient with computational resources?</p></li>
 <li><p>Does the code stick to the style and conventions of this project?</p></li>
 </ul>
-<p>More advice on code review can be found here for <a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review—as-an-author.html">pull request authors</a>, and <a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review—as-a-reviewer.html">pull request reviewers</a>.</p>
+<p>More advice on code review can be found here for <a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-an-author.html">pull request authors</a>, and <a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-a-reviewer.html">pull request reviewers</a>.</p>
 </div>
 </div>
 <div id="appendix-local-and-remote-as-branches" class="section level2" number="1.7">
