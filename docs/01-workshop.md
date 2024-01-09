@@ -366,8 +366,7 @@ After a variable number of commits and pushes, your remote branch is a different
 
 A **pull request** is a way to propose changes from a branch before it is merged back into the main repository. It is just like `git merge`, but it requires more documentation and confirmation. For instance, a collaborator can create their own work on a branch, and then create a pull request to have that new branch's feature to be integrated back to the main branch. The owner of the repository sometimes review the proposed changes before accepting the pull request.
 
-
-![](resources/images/01-workshop_files/figure-docx//1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I_g1014c75158f_0_751.png){width=100%}
+![](images/git_PR_illustration.png)
 
 When you have pushed changes to the branch, you will see an option to *"Compare & pull request"*. Click on it.
 
