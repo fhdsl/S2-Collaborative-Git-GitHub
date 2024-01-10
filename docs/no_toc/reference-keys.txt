@@ -19,8 +19,8 @@ branching-with-remotes
 pull-requests-1
 merge-conflicts-during-pull-requests
 code-reviews-during-a-pull-request
+github-issues
 appendix-local-and-remote-as-branches
 local-and-remote-branches-in-action
-appendix-github-issues
 appendix-references
 references
