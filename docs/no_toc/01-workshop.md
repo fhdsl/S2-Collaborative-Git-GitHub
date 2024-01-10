@@ -410,6 +410,15 @@ Some advice for reviewers responding to a pull request:
 
 More advice on code review can be found here for [pull request authors](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-an-author.html), and [pull request reviewers](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-a-reviewer.html).
 
+## GitHub issues
+
+Another nice collaborative feature of GitHub is GitHub issues. GitHub issues are a way for people to give feedback on your repository. 
+
+Here is a common scenario of using GitHub issues in the wild: you publish a piece of software on GitHub, and other users try it out. They are confused about how to run your code, because they are getting errors, so they return to the GitHub repository and post a GitHub issue documenting their error. You can then create a branch from this issue, make changes to your code to resolve the error, then use the pull request model to merge it back to the main branch! GitHub issues are also a common way to document to-do features you want to implement in the future.
+
+![](images/git_issue.png)
+
+
 ## Appendix: Local and remote as branches
 
 Remember that there are now two versions of our repository when we are connected to a remote: one is **local** on your computer, and one is **remote** on GitHub. Both of these versions are considered branches. One is the local `main` branch, and one is the remote `main` branch.
@@ -456,9 +465,7 @@ We see that the local `main` branch is ahead of the remote `origin/main` branch.
 
 Each time we run `git push` or `git pull`, Git performs a `git merge` to sync `origin/main` to `main` (`git push`), or a performs a `git merge` to sync `main` to `origin/main` (`git pull`).
 
-## Appendix: GitHub issues
 
-GitHub issues are a way for people to give feedback on your repository. Here is a common scenario of using GitHub issues in the wild: you publish a piece of software on GitHub, and other users try it out. They are confused about how to run your code, because they are getting errors, so they return to the GitHub repository and post a GitHub issue documenting their error. You can then create a branch from this issue, make changes to your code to resolve the error, then use the pull request model to merge it back to the main branch! GitHub issues are also a common way to document to-do features you want to implement in the future.
 
 ## Appendix: References
 
