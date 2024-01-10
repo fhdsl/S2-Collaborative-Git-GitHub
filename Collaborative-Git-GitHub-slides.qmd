@@ -88,7 +88,7 @@ o <-- o <-- o <-- o <---- o
 
 . . .
 
-2.  Create a Replit account and "fork" this project: https://replit.com/@ChrisLo6/GitAndGitHubDaSL
+2.  Create a Replit account and "fork" this project: https://replit.com/@clo22/CollaborativeGitGitHubDaSl
 
 . . .
 
@@ -101,6 +101,7 @@ sh setup.sh
 You will be asked how you want to log in, and pick the following:
 
 ```         
+Link for authentication: https://github.com/login/device
 ? What account do you want to log into? GitHub.com
 ? What is your preferred protocol for Git operations? HTTPS
 ? Authenticate Git with your GitHub credentials? Yes
@@ -248,10 +249,6 @@ A **pull request** is a way to propose changes from a branch before it is merged
 
 . . .
 
-For instance, a collaborator can create their own work on a branch, and then create a pull request to have that new branch's feature to be integrated back to the main branch. The owner of the repository sometimes review the proposed changes before accepting the pull request.
-
-. . .
-
 ![](images/git_PR_illustration.png)
 
 
@@ -282,7 +279,8 @@ Switched to a new branch 'clo2_development'
 . . .
 
 ```         
-% echo "branch edits" >> README.md
+% touch clo2.txt
+% echo "hello" > clo2.txt
 % git add README.md
 % git commit -m "edited README.md"
 % git push
@@ -325,7 +323,7 @@ For reviewers:
 
 -   Do the proposed changes answer the solve the problem? Can you test it out in the working branch?
 
--   Is the code clear and readable? Does it contain a healthy amount of comments and documentation for individuals not familiar with the project to understand generally what is going on?
+-   Is the code clear and readable?
 
 -   Is the code efficient with computational resources?
 
@@ -334,6 +332,27 @@ For reviewers:
 . . .
 
 Click *"Merge pull request"* to finish!
+
+## GitHub issues
+
+GitHub issues are a way for people to give feedback on your repository:
+
+. . .
+
+-   You publish a piece of software on GitHub, and other users try it out. 
+
+. . .
+
+-   They are confused about how to run your code,  so they return to the GitHub repository and post a GitHub issue documenting their error.
+
+. . .
+
+-   You can then create a branch from this issue, make changes to your code to resolve the error, then use the pull request model to merge it back to the main branch! 
+
+## Try creating a GitHub issue
+
+![](images/git_issue.png)
+
 
 
 ## Appendix: References

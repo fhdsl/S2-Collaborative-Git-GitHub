@@ -409,7 +409,7 @@
 </ol>
 <div class="fragment">
 <ol start="2" type="1">
-<li>Create a Replit account and “fork” this project: https://replit.com/<span class="citation" data-cites="ChrisLo6/GitAndGitHubDaSL">@ChrisLo6/GitAndGitHubDaSL</span></li>
+<li>Create a Replit account and “fork” this project: https://replit.com/<span class="citation" data-cites="clo22/CollaborativeGitGitHubDaSl">@clo22/CollaborativeGitGitHubDaSl</span></li>
 </ol>
 </div>
 <div class="fragment">
@@ -418,7 +418,8 @@
 </ol>
 <pre><code>sh setup.sh</code></pre>
 <p>You will be asked how you want to log in, and pick the following:</p>
-<pre><code>? What account do you want to log into? GitHub.com
+<pre><code>Link for authentication: https://github.com/login/device
+? What account do you want to log into? GitHub.com
 ? What is your preferred protocol for Git operations? HTTPS
 ? Authenticate Git with your GitHub credentials? Yes
 ? How would you like to authenticate GitHub CLI? Login with a web browser</code></pre>
@@ -531,9 +532,6 @@ Date:   Wed Dec 6 23:47:39 2023 +0000
 <h2>Pull request model</h2>
 <p>A <strong>pull request</strong> is a way to propose changes from a branch before it is merged back into the main repository. It is just like <code>git merge</code>, but it requires more documentation and confirmation.</p>
 <div class="fragment">
-<p>For instance, a collaborator can create their own work on a branch, and then create a pull request to have that new branch’s feature to be integrated back to the main branch. The owner of the repository sometimes review the proposed changes before accepting the pull request.</p>
-</div>
-<div class="fragment">
 <p><img data-src="images/git_PR_illustration.png"></p>
 </div>
 </section>
@@ -558,7 +556,8 @@ Switched to a new branch 'clo2_development'</code></pre>
 <section id="making-changes-to-new-branch" class="slide level2">
 <h2>Making changes to new branch</h2>
 <div class="fragment">
-<pre><code>% echo "branch edits" &gt;&gt; README.md
+<pre><code>% touch clo2.txt
+% echo "hello" &gt; clo2.txt
 % git add README.md
 % git commit -m "edited README.md"
 % git push</code></pre>
@@ -591,7 +590,7 @@ Switched to a new branch 'clo2_development'</code></pre>
 <p>For reviewers:</p>
 <ul>
 <li><p>Do the proposed changes answer the solve the problem? Can you test it out in the working branch?</p></li>
-<li><p>Is the code clear and readable? Does it contain a healthy amount of comments and documentation for individuals not familiar with the project to understand generally what is going on?</p></li>
+<li><p>Is the code clear and readable?</p></li>
 <li><p>Is the code efficient with computational resources?</p></li>
 <li><p>Does the code stick to the style and conventions of this project?</p></li>
 </ul>
@@ -599,6 +598,29 @@ Switched to a new branch 'clo2_development'</code></pre>
 <p>Click <em>“Merge pull request”</em> to finish!</p>
 </div>
 </section>
+<section id="github-issues" class="slide level2">
+<h2>GitHub issues</h2>
+<p>GitHub issues are a way for people to give feedback on your repository:</p>
+<div class="fragment">
+<ul>
+<li>You publish a piece of software on GitHub, and other users try it out.</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>They are confused about how to run your code, so they return to the GitHub repository and post a GitHub issue documenting their error.</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>You can then create a branch from this issue, make changes to your code to resolve the error, then use the pull request model to merge it back to the main branch!</li>
+</ul>
+</div>
+</section>
+<section id="try-creating-a-github-issue" class="slide level2">
+<h2>Try creating a GitHub issue</h2>
+
+<img data-src="images/git_issue.png" class="r-stretch"></section>
 <section id="appendix-references" class="slide level2">
 <h2>Appendix: References</h2>
 <ul>
