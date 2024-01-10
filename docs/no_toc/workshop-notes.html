@@ -102,11 +102,11 @@
 <li class="chapter" data-level="1.6.4" data-path="workshop-notes.html"><a href="workshop-notes.html#merge-conflicts-during-pull-requests"><i class="fa fa-check"></i><b>1.6.4</b> Merge conflicts during pull requests</a></li>
 <li class="chapter" data-level="1.6.5" data-path="workshop-notes.html"><a href="workshop-notes.html#code-reviews-during-a-pull-request"><i class="fa fa-check"></i><b>1.6.5</b> Code reviews during a pull request</a></li>
 </ul></li>
-<li class="chapter" data-level="1.7" data-path="workshop-notes.html"><a href="workshop-notes.html#appendix-local-and-remote-as-branches"><i class="fa fa-check"></i><b>1.7</b> Appendix: Local and remote as branches</a>
+<li class="chapter" data-level="1.7" data-path="workshop-notes.html"><a href="workshop-notes.html#github-issues"><i class="fa fa-check"></i><b>1.7</b> GitHub issues</a></li>
+<li class="chapter" data-level="1.8" data-path="workshop-notes.html"><a href="workshop-notes.html#appendix-local-and-remote-as-branches"><i class="fa fa-check"></i><b>1.8</b> Appendix: Local and remote as branches</a>
 <ul>
-<li class="chapter" data-level="1.7.1" data-path="workshop-notes.html"><a href="workshop-notes.html#local-and-remote-branches-in-action"><i class="fa fa-check"></i><b>1.7.1</b> Local and remote branches in action</a></li>
+<li class="chapter" data-level="1.8.1" data-path="workshop-notes.html"><a href="workshop-notes.html#local-and-remote-branches-in-action"><i class="fa fa-check"></i><b>1.8.1</b> Local and remote branches in action</a></li>
 </ul></li>
-<li class="chapter" data-level="1.8" data-path="workshop-notes.html"><a href="workshop-notes.html#appendix-github-issues"><i class="fa fa-check"></i><b>1.8</b> Appendix: GitHub issues</a></li>
 <li class="chapter" data-level="1.9" data-path="workshop-notes.html"><a href="workshop-notes.html#appendix-references"><i class="fa fa-check"></i><b>1.9</b> Appendix: References</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html"><i class="fa fa-check"></i>About the Authors</a></li>
@@ -437,8 +437,14 @@ Switched to a new branch &#39;clo2_development&#39;</code></pre>
 <p>More advice on code review can be found here for <a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-an-author.html">pull request authors</a>, and <a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-a-reviewer.html">pull request reviewers</a>.</p>
 </div>
 </div>
-<div id="appendix-local-and-remote-as-branches" class="section level2" number="1.7">
-<h2><span class="header-section-number">1.7</span> Appendix: Local and remote as branches</h2>
+<div id="github-issues" class="section level2" number="1.7">
+<h2><span class="header-section-number">1.7</span> GitHub issues</h2>
+<p>Another nice collaborative feature of GitHub is GitHub issues. GitHub issues are a way for people to give feedback on your repository.</p>
+<p>Here is a common scenario of using GitHub issues in the wild: you publish a piece of software on GitHub, and other users try it out. They are confused about how to run your code, because they are getting errors, so they return to the GitHub repository and post a GitHub issue documenting their error. You can then create a branch from this issue, make changes to your code to resolve the error, then use the pull request model to merge it back to the main branch! GitHub issues are also a common way to document to-do features you want to implement in the future.</p>
+<p><img src="images/git_issue.png" /></p>
+</div>
+<div id="appendix-local-and-remote-as-branches" class="section level2" number="1.8">
+<h2><span class="header-section-number">1.8</span> Appendix: Local and remote as branches</h2>
 <p>Remember that there are now two versions of our repository when we are connected to a remote: one is <strong>local</strong> on your computer, and one is <strong>remote</strong> on GitHub. Both of these versions are considered branches. One is the local <code>main</code> branch, and one is the remote <code>main</code> branch.</p>
 <p>Let’s see these two branches via <code>git log</code>:</p>
 <pre><code>% git log
@@ -448,8 +454,8 @@ Date:   Wed Dec 6 14:34:33 2023 -0800
 
     Initial commit</code></pre>
 <p>The remote <code>main</code> branch is designated as <code>origin/main</code>. There is another <code>HEAD</code> pointer on the remote as <code>origin/HEAD</code>, which we will not cover in detail here, but here is some <a href="https://superuser.com/questions/1192865/git-what-does-an-extra-item-origin-head-mean">reference</a>.</p>
-<div id="local-and-remote-branches-in-action" class="section level3" number="1.7.1">
-<h3><span class="header-section-number">1.7.1</span> Local and remote branches in action</h3>
+<div id="local-and-remote-branches-in-action" class="section level3" number="1.8.1">
+<h3><span class="header-section-number">1.8.1</span> Local and remote branches in action</h3>
 <p>Let’s see our local and remote branches in action.</p>
 <p>Suppose we make some local changes and commits, but don’t push it to the remote immediately. What happens?</p>
 <pre><code>% echo &quot;Additional README info&quot; &gt;&gt; README.md 
@@ -471,10 +477,6 @@ Date:   Wed Dec 6 14:34:33 2023 -0800
 <p>We see that the local <code>main</code> branch is ahead of the remote <code>origin/main</code> branch.</p>
 <p>Each time we run <code>git push</code> or <code>git pull</code>, Git performs a <code>git merge</code> to sync <code>origin/main</code> to <code>main</code> (<code>git push</code>), or a performs a <code>git merge</code> to sync <code>main</code> to <code>origin/main</code> (<code>git pull</code>).</p>
 </div>
-</div>
-<div id="appendix-github-issues" class="section level2" number="1.8">
-<h2><span class="header-section-number">1.8</span> Appendix: GitHub issues</h2>
-<p>GitHub issues are a way for people to give feedback on your repository. Here is a common scenario of using GitHub issues in the wild: you publish a piece of software on GitHub, and other users try it out. They are confused about how to run your code, because they are getting errors, so they return to the GitHub repository and post a GitHub issue documenting their error. You can then create a branch from this issue, make changes to your code to resolve the error, then use the pull request model to merge it back to the main branch! GitHub issues are also a common way to document to-do features you want to implement in the future.</p>
 </div>
 <div id="appendix-references" class="section level2" number="1.9">
 <h2><span class="header-section-number">1.9</span> Appendix: References</h2>
