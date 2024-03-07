@@ -355,12 +355,12 @@
 <h2>Goals of the workshop</h2>
 <div class="fragment">
 <ul>
-<li>Understand the concept of branching and merging for collaborative and diverging work.</li>
+<li>Understand the concept of branching and merging for collaborative work.</li>
 </ul>
 </div>
 <div class="fragment">
 <ul>
-<li>Create your own branch for independent work from a collaborative repository, and use a pull request on GitHub to receive feedback before merging.</li>
+<li>Create your own branch for independent work from a collaborative repository, and use a “pull request” on GitHub to receive feedback before merging.</li>
 </ul>
 </div>
 <div class="fragment">
@@ -369,6 +369,11 @@
 </ul>
 </div>
 </section>
+<section id="review-git-data-model" class="slide level2">
+<h2>Review: Git data model</h2>
+<p>You can save the state of your repository by making a <strong>commit</strong>: Git will save the repository’s <strong>directory tree</strong>, a link to the previous commit, and metadata.</p>
+
+<img data-src="https://git-scm.com/book/en/v2/images/snapshots.png" class="r-stretch"></section>
 <section id="branching-and-merging" class="slide level2">
 <h2>Branching and Merging</h2>
 <div class="fragment">
@@ -391,17 +396,9 @@
 </div>
 <div class="fragment">
 <p><strong>Branching</strong>: when branching commit paths are created.</p>
-<p><strong>Merging</strong>: when two branches are integrated together.</p>
+<p><strong>Merging</strong>: when two branches are integrated together. This sometimes require careful communication, and this is done in GitHub via a <strong>“pull request”.</strong></p>
 </div>
 </section>
-<section id="state-of-a-git-repository" class="slide level2">
-<h2>State of a Git repository</h2>
-
-<img data-src="images/git_workflow1.svg" class="r-stretch"></section>
-<section id="state-of-a-git-repository-with-remote" class="slide level2">
-<h2>State of a Git repository, with remote</h2>
-
-<img data-src="images/git_workflow2.svg" class="r-stretch"></section>
 <section id="set-up" class="slide level2">
 <h2>Set up</h2>
 <ol type="1">
@@ -409,7 +406,7 @@
 </ol>
 <div class="fragment">
 <ol start="2" type="1">
-<li>Create a Replit account and “fork” this project: https://replit.com/<span class="citation" data-cites="clo22/CollaborativeGitGitHubDaSl">@clo22/CollaborativeGitGitHubDaSl</span></li>
+<li>Create a Replit account and “fork” this project: <a href="https://replit.com/@clo22/CollaborativeGitGitHubDaSl">https://replit.com/@clo22/CollaborativeGitGitHubDaSl</a></li>
 </ol>
 </div>
 <div class="fragment">
@@ -426,6 +423,136 @@
 <p>You will be given a code, and you will provide that code to GitHub via <a href="https://github.com/login/device" class="uri">https://github.com/login/device</a>.</p>
 </div>
 </section>
+<section id="accessing-our-shared-repository" class="slide level2">
+<h2>Accessing our shared repository</h2>
+<ol type="1">
+<li>In Replit shell,</li>
+</ol>
+<pre><code>git clone https://github.com/fhdsl/Collaborative_Git_GitHub_Student_Practice.git
+
+cd Collaborative_Git_GitHub_Student_Practice/</code></pre>
+<ol start="2" type="1">
+<li>Open up https://github.com/fhdsl/Collaborative_Git_GitHub_Student_Practice in browser.</li>
+</ol>
+</section>
+<section id="creating-a-branch-on-the-remote" class="slide level2">
+<h2>Creating a branch on the remote</h2>
+
+<img data-src="images/git_branch.png" class="r-stretch"></section>
+<section id="making-changes-to-this-new-branch-locally" class="slide level2">
+<h2>Making changes to this new branch locally</h2>
+<p>The branch <code>clo2_development</code> is created on the remote, but it hasn’t been updated locally. We run <code>git pull</code> locally to update it and switch to that branch via <code>git checkout</code>.</p>
+<div class="fragment">
+<pre><code>% git pull
+From https://github.com/fhdsl/S2_Collaborative_Git_GitHub_Student_Practice
+ * [new branch]      clo2_development -&gt; origin/clo2_development
+Already up to date.
+
+% git checkout clo2_development
+Branch 'clo2_development' set up to track remote branch 'clo2_development' from 'origin'.
+Switched to a new branch 'clo2_development'</code></pre>
+</div>
+<div class="fragment">
+<p>We can use <code>git checkout main</code> to look switch back to our main branch. We can also use <code>git branch</code> to see the branches on a repository.</p>
+</div>
+</section>
+<section id="review-state-of-a-git-repository-with-remote" class="slide level2">
+<h2>Review: State of a Git repository, with remote</h2>
+
+<img data-src="images/git_workflow3.png" class="r-stretch"></section>
+<section id="making-changes-to-new-branch" class="slide level2">
+<h2>Making changes to new branch</h2>
+<div class="fragment">
+<p>Create a file that is unique to you.</p>
+<pre><code>% touch clo2.txt
+% echo "hello" &gt; clo2.txt
+% git add clo2.txt
+% git commit -m "Created clo2.txt"
+% git push</code></pre>
+</div>
+<div class="fragment">
+<p>When you have pushed changes to the branch, you will see an option to <em>“Compare &amp; pull request”</em>. Click on it.</p>
+<p><img data-src="images/git_PR1.png"></p>
+</div>
+</section>
+<section id="pull-request-model" class="slide level2">
+<h2>Pull request model</h2>
+<p>A <strong>pull request</strong> is a way to propose changes from a branch before it is merged back into the main repository.</p>
+<div class="fragment">
+<p>This is commonly used in collaborative work in which a branch needs to be approved by other members on the team before it is integrated into the main project.</p>
+</div>
+<div class="fragment">
+<p><img data-src="images/git_PR_illustration.png"></p>
+</div>
+</section>
+<section id="creating-a-pull-request" class="slide level2">
+<h2>Creating a pull request</h2>
+<p>You will see that you are trying to merge <code>clo2_development</code> into <code>main</code> on the remote. It also requires you to write a description of what you did on your branch.</p>
+<div class="fragment">
+<p><img data-src="images/git_PR2.png"></p>
+</div>
+</section>
+<section id="creating-a-pull-request-1" class="slide level2">
+<h2>Creating a pull request</h2>
+
+<img data-src="images/git_PR3.png" class="r-stretch"><div class="fragment">
+<p>Add your partner’s GitHub username as your reviewer, and have them make comments/create a code review about it!!</p>
+</div>
+<div class="fragment">
+<p>Make additional commits based on their comments.</p>
+</div>
+</section>
+<section id="guidelines-on-pull-request-discussions" class="slide level2">
+<h2>Guidelines on pull request discussions</h2>
+<p>For writers:</p>
+<ul>
+<li><p>it provides context of the code changes you made.</p></li>
+<li><p>it asks for explicit feedback of what kind of feedback is needed.</p></li>
+<li><p>it is a a small and modular change that can be discussed.</p></li>
+</ul>
+<p>For reviewers:</p>
+<ul>
+<li><p>Do the proposed changes answer the solve the problem? Can you test it out in the working branch?</p></li>
+<li><p>Is the code clear and readable?</p></li>
+<li><p>Is the code efficient with computational resources?</p></li>
+<li><p>Does the code stick to the style and conventions of this project?</p></li>
+</ul>
+<div class="fragment">
+<p>Click <em>“Merge pull request”</em> to finish!</p>
+</div>
+</section>
+<section id="a-pull-request-with-conflicts" class="slide level2">
+<h2>A Pull Request with conflicts</h2>
+<ul>
+<li><p>Everyone create a new branch</p></li>
+<li><p>I’ll modify <code>README.md</code> on the main branch</p></li>
+<li><p>You make changes to <code>README.md</code> on your branch, and make a Pull Request</p></li>
+<li><p>What to do with a conflict?</p></li>
+</ul>
+</section>
+<section id="github-issues" class="slide level2">
+<h2>GitHub issues</h2>
+<p>GitHub issues are a way for people to give feedback on your repository:</p>
+<div class="fragment">
+<ul>
+<li>You publish a piece of software on GitHub, and other users try it out.</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>They are confused about how to run your code, so they return to the GitHub repository and post a GitHub issue documenting their error.</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>You can then create a branch from this issue, make changes to your code to resolve the error, then use the pull request model to merge it back to the main branch!</li>
+</ul>
+</div>
+</section>
+<section id="try-creating-a-github-issue" class="slide level2">
+<h2>Try creating a GitHub issue</h2>
+
+<img data-src="images/git_issue.png" class="r-stretch"></section>
 <section id="getting-started-with-branches" class="slide level2">
 <h2>Getting started with branches</h2>
 <p>Let’s create a local repository to practice branching:</p>
@@ -517,110 +644,6 @@ Date:   Wed Dec 6 23:47:39 2023 +0000
     Initial commit</code></pre>
 </div>
 </section>
-<section id="accessing-our-shared-repository" class="slide level2">
-<h2>Accessing our shared repository</h2>
-<ol type="1">
-<li>In Replit shell,</li>
-</ol>
-<pre><code>%cd ~
-%git clone https://github.com/fhdsl/Collaborative_Git_GitHub_Student_Practice.git</code></pre>
-<ol start="2" type="1">
-<li>Open up https://github.com/fhdsl/Collaborative_Git_GitHub_Student_Practice in browser.</li>
-</ol>
-</section>
-<section id="pull-request-model" class="slide level2">
-<h2>Pull request model</h2>
-<p>A <strong>pull request</strong> is a way to propose changes from a branch before it is merged back into the main repository. It is just like <code>git merge</code>, but it requires more documentation and confirmation.</p>
-<div class="fragment">
-<p><img data-src="images/git_PR_illustration.png"></p>
-</div>
-</section>
-<section id="creating-a-branch-on-the-remote" class="slide level2">
-<h2>Creating a branch on the remote</h2>
-
-<img data-src="images/git_branch.png" class="r-stretch"></section>
-<section id="making-changes-to-this-new-branch-locally" class="slide level2">
-<h2>Making changes to this new branch locally</h2>
-<p>The branch <code>clo2_development</code> is created on the remote, but it hasn’t been updated locally. We run <code>git pull</code> locally to update it and switch to that branch via <code>git checkout</code>.</p>
-<div class="fragment">
-<pre><code>% git pull
-From https://github.com/fhdsl/S2_Collaborative_Git_GitHub_Student_Practice
- * [new branch]      clo2_development -&gt; origin/clo2_development
-Already up to date.
-
-% git checkout clo2_development
-Branch 'clo2_development' set up to track remote branch 'clo2_development' from 'origin'.
-Switched to a new branch 'clo2_development'</code></pre>
-</div>
-</section>
-<section id="making-changes-to-new-branch" class="slide level2">
-<h2>Making changes to new branch</h2>
-<div class="fragment">
-<pre><code>% touch clo2.txt
-% echo "hello" &gt; clo2.txt
-% git add README.md
-% git commit -m "edited README.md"
-% git push</code></pre>
-</div>
-<div class="fragment">
-<p>When you have pushed changes to the branch, you will see an option to <em>“Compare &amp; pull request”</em>. Click on it.</p>
-<p><img data-src="images/git_PR1.png"></p>
-</div>
-</section>
-<section id="creating-a-pull-request" class="slide level2">
-<h2>Creating a pull request</h2>
-<p>You will see that you are trying to merge <code>clo2_development</code> into <code>main</code> on the remote. It also requires you to write a description of what you did on your branch.</p>
-<div class="fragment">
-<p><img data-src="images/git_PR2.png"></p>
-</div>
-</section>
-<section id="creating-a-pull-request-1" class="slide level2">
-<h2>Creating a pull request</h2>
-
-<img data-src="images/git_PR3.png" class="r-stretch"><p>Add your partner’s GitHub username as your reviewer, and talk about it!</p>
-</section>
-<section id="guidelines-on-pull-request-discussions" class="slide level2">
-<h2>Guidelines on pull request discussions</h2>
-<p>For writers:</p>
-<ul>
-<li><p>it provides context of the code changes you made.</p></li>
-<li><p>it asks for explicit feedback of what kind of feedback is needed.</p></li>
-<li><p>it is a a small and modular change that can be discussed.</p></li>
-</ul>
-<p>For reviewers:</p>
-<ul>
-<li><p>Do the proposed changes answer the solve the problem? Can you test it out in the working branch?</p></li>
-<li><p>Is the code clear and readable?</p></li>
-<li><p>Is the code efficient with computational resources?</p></li>
-<li><p>Does the code stick to the style and conventions of this project?</p></li>
-</ul>
-<div class="fragment">
-<p>Click <em>“Merge pull request”</em> to finish!</p>
-</div>
-</section>
-<section id="github-issues" class="slide level2">
-<h2>GitHub issues</h2>
-<p>GitHub issues are a way for people to give feedback on your repository:</p>
-<div class="fragment">
-<ul>
-<li>You publish a piece of software on GitHub, and other users try it out.</li>
-</ul>
-</div>
-<div class="fragment">
-<ul>
-<li>They are confused about how to run your code, so they return to the GitHub repository and post a GitHub issue documenting their error.</li>
-</ul>
-</div>
-<div class="fragment">
-<ul>
-<li>You can then create a branch from this issue, make changes to your code to resolve the error, then use the pull request model to merge it back to the main branch!</li>
-</ul>
-</div>
-</section>
-<section id="try-creating-a-github-issue" class="slide level2">
-<h2>Try creating a GitHub issue</h2>
-
-<img data-src="images/git_issue.png" class="r-stretch"></section>
 <section id="appendix-references" class="slide level2">
 <h2>Appendix: References</h2>
 <ul>
