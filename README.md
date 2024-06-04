@@ -1,4 +1,4 @@
-# {Intermediate Git and GitHub}
+# Intermediate Git and GitHub
 
 This course was created from [this GitHub template](https://github.com/jhudsl/OTTR_Template).
 
